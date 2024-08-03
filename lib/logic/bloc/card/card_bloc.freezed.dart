@@ -21,6 +21,8 @@ mixin _$CardEvent {
     required TResult Function() getCards,
     required TResult Function(CardModel card) addCard,
     required TResult Function(String id) deleteCard,
+    required TResult Function(String fromCardID, String toCardId, double amount)
+        sendMoney,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +30,8 @@ mixin _$CardEvent {
     TResult? Function()? getCards,
     TResult? Function(CardModel card)? addCard,
     TResult? Function(String id)? deleteCard,
+    TResult? Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +39,8 @@ mixin _$CardEvent {
     TResult Function()? getCards,
     TResult Function(CardModel card)? addCard,
     TResult Function(String id)? deleteCard,
+    TResult Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +49,7 @@ mixin _$CardEvent {
     required TResult Function(_GetCards value) getCards,
     required TResult Function(_AddCard value) addCard,
     required TResult Function(_DeleteCard value) deleteCard,
+    required TResult Function(_SendMoney value) sendMoney,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +57,7 @@ mixin _$CardEvent {
     TResult? Function(_GetCards value)? getCards,
     TResult? Function(_AddCard value)? addCard,
     TResult? Function(_DeleteCard value)? deleteCard,
+    TResult? Function(_SendMoney value)? sendMoney,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +65,7 @@ mixin _$CardEvent {
     TResult Function(_GetCards value)? getCards,
     TResult Function(_AddCard value)? addCard,
     TResult Function(_DeleteCard value)? deleteCard,
+    TResult Function(_SendMoney value)? sendMoney,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +129,8 @@ class _$GetCardsImpl implements _GetCards {
     required TResult Function() getCards,
     required TResult Function(CardModel card) addCard,
     required TResult Function(String id) deleteCard,
+    required TResult Function(String fromCardID, String toCardId, double amount)
+        sendMoney,
   }) {
     return getCards();
   }
@@ -130,6 +141,8 @@ class _$GetCardsImpl implements _GetCards {
     TResult? Function()? getCards,
     TResult? Function(CardModel card)? addCard,
     TResult? Function(String id)? deleteCard,
+    TResult? Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
   }) {
     return getCards?.call();
   }
@@ -140,6 +153,8 @@ class _$GetCardsImpl implements _GetCards {
     TResult Function()? getCards,
     TResult Function(CardModel card)? addCard,
     TResult Function(String id)? deleteCard,
+    TResult Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
     required TResult orElse(),
   }) {
     if (getCards != null) {
@@ -154,6 +169,7 @@ class _$GetCardsImpl implements _GetCards {
     required TResult Function(_GetCards value) getCards,
     required TResult Function(_AddCard value) addCard,
     required TResult Function(_DeleteCard value) deleteCard,
+    required TResult Function(_SendMoney value) sendMoney,
   }) {
     return getCards(this);
   }
@@ -164,6 +180,7 @@ class _$GetCardsImpl implements _GetCards {
     TResult? Function(_GetCards value)? getCards,
     TResult? Function(_AddCard value)? addCard,
     TResult? Function(_DeleteCard value)? deleteCard,
+    TResult? Function(_SendMoney value)? sendMoney,
   }) {
     return getCards?.call(this);
   }
@@ -174,6 +191,7 @@ class _$GetCardsImpl implements _GetCards {
     TResult Function(_GetCards value)? getCards,
     TResult Function(_AddCard value)? addCard,
     TResult Function(_DeleteCard value)? deleteCard,
+    TResult Function(_SendMoney value)? sendMoney,
     required TResult orElse(),
   }) {
     if (getCards != null) {
@@ -264,6 +282,8 @@ class _$AddCardImpl implements _AddCard {
     required TResult Function() getCards,
     required TResult Function(CardModel card) addCard,
     required TResult Function(String id) deleteCard,
+    required TResult Function(String fromCardID, String toCardId, double amount)
+        sendMoney,
   }) {
     return addCard(card);
   }
@@ -274,6 +294,8 @@ class _$AddCardImpl implements _AddCard {
     TResult? Function()? getCards,
     TResult? Function(CardModel card)? addCard,
     TResult? Function(String id)? deleteCard,
+    TResult? Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
   }) {
     return addCard?.call(card);
   }
@@ -284,6 +306,8 @@ class _$AddCardImpl implements _AddCard {
     TResult Function()? getCards,
     TResult Function(CardModel card)? addCard,
     TResult Function(String id)? deleteCard,
+    TResult Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
     required TResult orElse(),
   }) {
     if (addCard != null) {
@@ -298,6 +322,7 @@ class _$AddCardImpl implements _AddCard {
     required TResult Function(_GetCards value) getCards,
     required TResult Function(_AddCard value) addCard,
     required TResult Function(_DeleteCard value) deleteCard,
+    required TResult Function(_SendMoney value) sendMoney,
   }) {
     return addCard(this);
   }
@@ -308,6 +333,7 @@ class _$AddCardImpl implements _AddCard {
     TResult? Function(_GetCards value)? getCards,
     TResult? Function(_AddCard value)? addCard,
     TResult? Function(_DeleteCard value)? deleteCard,
+    TResult? Function(_SendMoney value)? sendMoney,
   }) {
     return addCard?.call(this);
   }
@@ -318,6 +344,7 @@ class _$AddCardImpl implements _AddCard {
     TResult Function(_GetCards value)? getCards,
     TResult Function(_AddCard value)? addCard,
     TResult Function(_DeleteCard value)? deleteCard,
+    TResult Function(_SendMoney value)? sendMoney,
     required TResult orElse(),
   }) {
     if (addCard != null) {
@@ -403,6 +430,8 @@ class _$DeleteCardImpl implements _DeleteCard {
     required TResult Function() getCards,
     required TResult Function(CardModel card) addCard,
     required TResult Function(String id) deleteCard,
+    required TResult Function(String fromCardID, String toCardId, double amount)
+        sendMoney,
   }) {
     return deleteCard(id);
   }
@@ -413,6 +442,8 @@ class _$DeleteCardImpl implements _DeleteCard {
     TResult? Function()? getCards,
     TResult? Function(CardModel card)? addCard,
     TResult? Function(String id)? deleteCard,
+    TResult? Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
   }) {
     return deleteCard?.call(id);
   }
@@ -423,6 +454,8 @@ class _$DeleteCardImpl implements _DeleteCard {
     TResult Function()? getCards,
     TResult Function(CardModel card)? addCard,
     TResult Function(String id)? deleteCard,
+    TResult Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
     required TResult orElse(),
   }) {
     if (deleteCard != null) {
@@ -437,6 +470,7 @@ class _$DeleteCardImpl implements _DeleteCard {
     required TResult Function(_GetCards value) getCards,
     required TResult Function(_AddCard value) addCard,
     required TResult Function(_DeleteCard value) deleteCard,
+    required TResult Function(_SendMoney value) sendMoney,
   }) {
     return deleteCard(this);
   }
@@ -447,6 +481,7 @@ class _$DeleteCardImpl implements _DeleteCard {
     TResult? Function(_GetCards value)? getCards,
     TResult? Function(_AddCard value)? addCard,
     TResult? Function(_DeleteCard value)? deleteCard,
+    TResult? Function(_SendMoney value)? sendMoney,
   }) {
     return deleteCard?.call(this);
   }
@@ -457,6 +492,7 @@ class _$DeleteCardImpl implements _DeleteCard {
     TResult Function(_GetCards value)? getCards,
     TResult Function(_AddCard value)? addCard,
     TResult Function(_DeleteCard value)? deleteCard,
+    TResult Function(_SendMoney value)? sendMoney,
     required TResult orElse(),
   }) {
     if (deleteCard != null) {
@@ -472,6 +508,176 @@ abstract class _DeleteCard implements CardEvent {
   String get id;
   @JsonKey(ignore: true)
   _$$DeleteCardImplCopyWith<_$DeleteCardImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SendMoneyImplCopyWith<$Res> {
+  factory _$$SendMoneyImplCopyWith(
+          _$SendMoneyImpl value, $Res Function(_$SendMoneyImpl) then) =
+      __$$SendMoneyImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String fromCardID, String toCardId, double amount});
+}
+
+/// @nodoc
+class __$$SendMoneyImplCopyWithImpl<$Res>
+    extends _$CardEventCopyWithImpl<$Res, _$SendMoneyImpl>
+    implements _$$SendMoneyImplCopyWith<$Res> {
+  __$$SendMoneyImplCopyWithImpl(
+      _$SendMoneyImpl _value, $Res Function(_$SendMoneyImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fromCardID = null,
+    Object? toCardId = null,
+    Object? amount = null,
+  }) {
+    return _then(_$SendMoneyImpl(
+      null == fromCardID
+          ? _value.fromCardID
+          : fromCardID // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == toCardId
+          ? _value.toCardId
+          : toCardId // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SendMoneyImpl implements _SendMoney {
+  _$SendMoneyImpl(this.fromCardID, this.toCardId, this.amount);
+
+  @override
+  final String fromCardID;
+  @override
+  final String toCardId;
+  @override
+  final double amount;
+
+  @override
+  String toString() {
+    return 'CardEvent.sendMoney(fromCardID: $fromCardID, toCardId: $toCardId, amount: $amount)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SendMoneyImpl &&
+            (identical(other.fromCardID, fromCardID) ||
+                other.fromCardID == fromCardID) &&
+            (identical(other.toCardId, toCardId) ||
+                other.toCardId == toCardId) &&
+            (identical(other.amount, amount) || other.amount == amount));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, fromCardID, toCardId, amount);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SendMoneyImplCopyWith<_$SendMoneyImpl> get copyWith =>
+      __$$SendMoneyImplCopyWithImpl<_$SendMoneyImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getCards,
+    required TResult Function(CardModel card) addCard,
+    required TResult Function(String id) deleteCard,
+    required TResult Function(String fromCardID, String toCardId, double amount)
+        sendMoney,
+  }) {
+    return sendMoney(fromCardID, toCardId, amount);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getCards,
+    TResult? Function(CardModel card)? addCard,
+    TResult? Function(String id)? deleteCard,
+    TResult? Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
+  }) {
+    return sendMoney?.call(fromCardID, toCardId, amount);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getCards,
+    TResult Function(CardModel card)? addCard,
+    TResult Function(String id)? deleteCard,
+    TResult Function(String fromCardID, String toCardId, double amount)?
+        sendMoney,
+    required TResult orElse(),
+  }) {
+    if (sendMoney != null) {
+      return sendMoney(fromCardID, toCardId, amount);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetCards value) getCards,
+    required TResult Function(_AddCard value) addCard,
+    required TResult Function(_DeleteCard value) deleteCard,
+    required TResult Function(_SendMoney value) sendMoney,
+  }) {
+    return sendMoney(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetCards value)? getCards,
+    TResult? Function(_AddCard value)? addCard,
+    TResult? Function(_DeleteCard value)? deleteCard,
+    TResult? Function(_SendMoney value)? sendMoney,
+  }) {
+    return sendMoney?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetCards value)? getCards,
+    TResult Function(_AddCard value)? addCard,
+    TResult Function(_DeleteCard value)? deleteCard,
+    TResult Function(_SendMoney value)? sendMoney,
+    required TResult orElse(),
+  }) {
+    if (sendMoney != null) {
+      return sendMoney(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SendMoney implements CardEvent {
+  factory _SendMoney(
+          final String fromCardID, final String toCardId, final double amount) =
+      _$SendMoneyImpl;
+
+  String get fromCardID;
+  String get toCardId;
+  double get amount;
+  @JsonKey(ignore: true)
+  _$$SendMoneyImplCopyWith<_$SendMoneyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -1,5 +1,5 @@
 import 'package:banking/data/models/card_model.dart';
-import 'package:banking/logic/bloc/card_bloc.dart';
+import 'package:banking/logic/bloc/card/card_bloc.dart';
 import 'package:banking/utils/get_it.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';

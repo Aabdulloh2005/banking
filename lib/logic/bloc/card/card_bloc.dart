@@ -15,6 +15,7 @@ class CardBloc extends Bloc<CardEvent, CardState> {
     on<_GetCards>(_onGetCards);
     on<_AddCard>(_onAddCard);
     on<_DeleteCard>(_onDeleteCard);
+    on<_SendMoney>(_onSendMoney);
   }
 
   _onGetCards(_GetCards event, Emitter<CardState> emit) async {
@@ -46,6 +47,20 @@ class CardBloc extends Bloc<CardEvent, CardState> {
       await cardRepository.deleeteCard(event.id);
       final cards = await cardRepository.getCards();
 
+      emit(_CardLoadedState(cards));
+    } catch (e) {
+      emit(_CardErrorState(e.toString()));
+    }
+  }
+
+  _onSendMoney(_SendMoney event, emit) async {
+    emit(_CardLoadingState());
+
+    try {
+      await cardRepository.sendMoney(
+          event.fromCardID, event.toCardId, event.amount);
+
+      final cards = await cardRepository.getCards();
       emit(_CardLoadedState(cards));
     } catch (e) {
       emit(_CardErrorState(e.toString()));

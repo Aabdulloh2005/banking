@@ -17,4 +17,14 @@ class CardRepository {
   Future<void> deleeteCard(String id) async {
     await cardDioService.deleteCard(id);
   }
+
+  Future<void> sendMoney(
+      String fromCardId, String toCardId, double amount) async {
+    print("repoga keldi");
+    await cardDioService.sendMoney(fromCardId, toCardId, amount);
+  }
+
+  Future<List<Map<String, dynamic>>> getTransactions() async {
+    return await cardDioService.getTransactions();
+  }
 }

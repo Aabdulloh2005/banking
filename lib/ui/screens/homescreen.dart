@@ -1,4 +1,4 @@
-import 'package:banking/logic/bloc/card_bloc.dart';
+import 'package:banking/logic/bloc/card/card_bloc.dart';
 import 'package:banking/ui/widgets/custom_card.dart';
 import 'package:banking/utils/get_it.dart';
 import 'package:flutter/material.dart';
